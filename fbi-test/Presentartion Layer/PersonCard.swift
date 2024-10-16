@@ -9,26 +9,32 @@ import SwiftUI
 
 struct PersonCard: View {
     
+    // MARK: Properties
     var name: String
     var personInfo: String
     var imageUrl: String
     
+    // MARK: Body
     var body: some View {
-
-        HStack {
+        HStack(alignment: .top) {
             avatar
             info
         }
         .frame(maxWidth: .infinity)
         .padding()
-        .padding(.top)
     }
     
     @ViewBuilder
     private var avatar: some View {
-        AsyncImage(url: URL(string: imageUrl))
-            .frame(width: 75, height: 75)
-            .padding(.horizontal)
+        AsyncImage(url: URL(string: imageUrl)) { image in
+            image
+                .resizable()
+                .frame(width: 90, height: 90)
+                .aspectRatio(contentMode: .fit)
+         } placeholder: {
+            Circle()
+                .foregroundColor(.secondary)
+        }
     }
     
     @ViewBuilder
@@ -36,12 +42,11 @@ struct PersonCard: View {
         
         VStack(alignment: .leading) {
             Text(name)
-                .font(.title2)
             
             Text("Alias: Boris levitan, Boris")
-                .font(.callout)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .font(.title2)
                 .foregroundStyle(.gray)
-            
             
             Text(personInfo)
             
@@ -49,16 +54,15 @@ struct PersonCard: View {
                    label: {
                 Text("Show More")
             })
-
         }
-        
     }
     
 }
 
-//#Preview {
-//    PersonCard(
-//        name: "Jesus de la criz",
-//        personInfo: "Loren ipsum",
-//        imageUrl: "https://www.fbi.gov/wanted/vicap/missing-persons/jesus-de-la-cruz---lynn-massachusetts/@@images/image/thumb")
-//}
+#Preview {
+    PersonCard(
+        name: "Jesus de la criz",
+        personInfo: "Loren ipsum",
+        imageUrl: "https://www.fbi.gov/wanted/vicap/missing-persons/jesus-de-la-cruz---lynn-massachusetts/@@images/image/thumb"
+    )
+}

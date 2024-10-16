@@ -9,6 +9,6 @@ import Foundation
 
 
 struct WanterPersonDomain: Hashable {
-    let name: String
+    let title: String
     let avatarURL: String
 }

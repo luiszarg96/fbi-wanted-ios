@@ -9,54 +9,56 @@ import SwiftUI
 
 struct WantedListView: View {
     
-    @State var viewModel: WantedListViewModel
+    // MARK: Wrapped Properties
+    @StateObject private var viewModel: WantedListViewModel
     
-    init(viewModel: WantedListViewModel = WantedListViewModel()) {
-        self.viewModel = viewModel
+    // MARK: Initializer
+    init(
+        viewModel: WantedListViewModel = WantedListViewModel()
+    ) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
     }
     
+    // MARK: Body
     var body: some View {
         content
     }
     
-    @ViewBuilder
     private var content: some View {
-        NavigationView(content: {
-            ScrollView {
-                VStack {
-                    wantedPersonList
-                }
+        NavigationStack {
+            VStack {
+                header
+                
+                wantedPersonList
             }
-        })
-        .searchable(text: .constant(""))
+        }
     }
     
     private var header: some View {
-        HStack {
+        HStack(alignment: .center) {
             Text("FBI Wanted List")
                 .font(.title)
-                .frame(alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
             
-//            Image(systemName: "magnifyingglass")
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(.blue)
+                .padding(.horizontal)
         }
+        .frame(maxWidth: .infinity)
     }
     
-    @ViewBuilder
     private var wantedPersonList: some View {
-        
-        VStack {
+        List {
             ForEach(viewModel.wantedPersonList, id: \.self ) { item in
-                PersonCard(
-                    name: item.name,
-                    personInfo: "",
-                    imageUrl: item.avatarURL)
+                NavigationLink(value: item) {
+                    PersonCard(
+                        name: item.title,
+                        personInfo: "",
+                        imageUrl: item.avatarURL)
+                }
             }
         }
-        .padding()
-        .border(.black)
-        .padding(.horizontal, 16)
-        .background(.white)
-        
     }
     
 }
