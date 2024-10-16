@@ -15,4 +15,6 @@ struct WantedListConstants {
     static let cornerRadius: CGFloat = 10
     static let maxNumberOfLines: Int = 2
     
+    // Assets
+    static let iconName: String = "magnifyingglass"
 }

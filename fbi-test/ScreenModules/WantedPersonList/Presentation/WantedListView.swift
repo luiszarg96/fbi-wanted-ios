@@ -25,6 +25,9 @@ struct WantedListView: View {
             content
             progressView
         }
+        .onAppear {
+            viewModel.setup()
+        }
     }
     
     private var content: some View {
@@ -44,7 +47,7 @@ struct WantedListView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
             
-            Image(systemName: "magnifyingglass")
+            Image(systemName: WantedListConstants.iconName)
                 .foregroundStyle(.blue)
                 .padding(.horizontal)
         }

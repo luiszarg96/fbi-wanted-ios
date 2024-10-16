@@ -24,8 +24,6 @@ final class WantedListViewModel: ObservableObject {
         wantedPersonUseCase: FBIWantedPersonUseCaseType = FBIWantedPersonUseCase()
     ) {
         self.wantedPersonUseCase = wantedPersonUseCase
-        
-        setup()
     }
     
     // MARK: - Methods
