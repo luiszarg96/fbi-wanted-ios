@@ -14,6 +14,9 @@ struct ImageView: View {
     @StateObject var viewModel: ImageViewModel
     @State var isLoading: Bool = false
     
+    // MARK: Properties
+    let imageSize = WantedListConstants.imageSize
+    
     // MARK: Initializer
     init(url: String) {
         _viewModel = StateObject(wrappedValue: ImageViewModel(url: url))
@@ -27,7 +30,7 @@ struct ImageView: View {
             } else if let image = viewModel.image {
                 Image(uiImage: image)
                     .resizable()
-                    .frame(width: 90, height: 90)
+                    .frame(width: imageSize, height: imageSize)
                     .aspectRatio(contentMode: .fit)
             }
         }

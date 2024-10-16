@@ -24,6 +24,7 @@
 		459865AF2CC0160000956D0D /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865AE2CC0160000956D0D /* ImageView.swift */; };
 		459865B32CC0265900956D0D /* AppLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865B22CC0265900956D0D /* AppLocalized.swift */; };
 		459865B52CC0274400956D0D /* ProgressViewIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865B42CC0274400956D0D /* ProgressViewIndicator.swift */; };
+		459865B82CC029DD00956D0D /* WantedListConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865B72CC029DD00956D0D /* WantedListConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		459865AE2CC0160000956D0D /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		459865B22CC0265900956D0D /* AppLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalized.swift; sourceTree = "<group>"; };
 		459865B42CC0274400956D0D /* ProgressViewIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewIndicator.swift; sourceTree = "<group>"; };
+		459865B72CC029DD00956D0D /* WantedListConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +168,7 @@
 		4598659B2CBEFB2700956D0D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				4598659C2CBEFB3500956D0D /* WantedPersonDomain.swift */,
+				459865B62CC0299F00956D0D /* Entities */,
 				459865972CBEF8FA00956D0D /* UseCases */,
 			);
 			path = Domain;
@@ -178,6 +180,7 @@
 				4598658D2CBEF40600956D0D /* WantedListView.swift */,
 				459865912CBEF65F00956D0D /* WantedListViewModel.swift */,
 				4598658F2CBEF46600956D0D /* WantedPersonCardView.swift */,
+				459865B72CC029DD00956D0D /* WantedListConstants.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -232,6 +235,14 @@
 			children = (
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		459865B62CC0299F00956D0D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4598659C2CBEFB3500956D0D /* WantedPersonDomain.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459865B82CC029DD00956D0D /* WantedListConstants.swift in Sources */,
 				459865A42CBF8F8500956D0D /* WantedListResponse+Mapper.swift in Sources */,
 				459865902CBEF46600956D0D /* WantedPersonCardView.swift in Sources */,
 				457586442CBEF126006F5207 /* ContentView.swift in Sources */,

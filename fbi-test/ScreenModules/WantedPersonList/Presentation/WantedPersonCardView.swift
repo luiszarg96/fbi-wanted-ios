@@ -10,7 +10,7 @@ import SwiftUI
 struct WantedPersonCardView: View {
     
     // MARK: Wrapped Properties
-    @State private var maxLines: Int? = 2
+    @State private var maxLines: Int? = WantedListConstants.maxNumberOfLines
     @State private var hasMoreDescription = false
     
     // MARK: Properties
@@ -71,7 +71,7 @@ struct WantedPersonCardView: View {
                     .foregroundStyle(.blue)
                     .onTapGesture {
                         withAnimation {
-                            maxLines = maxLines == 2 ? nil : 2
+                            setMaxNumberOfLines()
                         }
                     }
             }
@@ -79,8 +79,13 @@ struct WantedPersonCardView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
+    private func setMaxNumberOfLines() {
+        maxLines = maxLines == WantedListConstants.maxNumberOfLines ? 
+        nil : WantedListConstants.maxNumberOfLines
+    }
+    
     private func getButtonText() -> String{
-        maxLines == 2 ? showMoreButton : showLessButton
+        maxLines == WantedListConstants.maxNumberOfLines ? showMoreButton : showLessButton
     }
     
 }
