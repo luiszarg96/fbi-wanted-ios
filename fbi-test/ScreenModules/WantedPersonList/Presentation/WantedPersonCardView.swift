@@ -1,5 +1,5 @@
 //
-//  PersonCard.swift
+//  WantedPersonCardView.swift
 //  fbi-test
 //
 //  Created by Luis Zarza on 2024-10-15.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PersonCard: View {
+struct WantedPersonCardView: View {
     
     // MARK: Properties
     var name: String
@@ -26,20 +26,7 @@ struct PersonCard: View {
     
     @ViewBuilder
     private var avatar: some View {
-//        AsyncImage(url: URL(string: imageUrl)) { image in
-//            image
-//                .resizable()
-//                .frame(width: 90, height: 90)
-//                .aspectRatio(contentMode: .fit)
-//         } placeholder: {
-//            Circle()
-//                .foregroundColor(.secondary)
-//        }
-        
         ImageView(url: imageUrl)
-//            .clipShape(Rectangle())
-//            .frame(width: 90, height: 90)
-        
     }
     
     @ViewBuilder
@@ -65,7 +52,7 @@ struct PersonCard: View {
 }
 
 #Preview {
-    PersonCard(
+    WantedPersonCardView(
         name: "Jesus de la criz",
         personInfo: "Loren ipsum",
         imageUrl: "https://www.fbi.gov/wanted/vicap/missing-persons/jesus-de-la-cruz---lynn-massachusetts/@@images/image/thumb"

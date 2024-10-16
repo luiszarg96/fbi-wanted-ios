@@ -12,7 +12,7 @@
 		457586462CBEF12A006F5207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457586452CBEF12A006F5207 /* Assets.xcassets */; };
 		457586492CBEF12A006F5207 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457586482CBEF12A006F5207 /* Preview Assets.xcassets */; };
 		4598658E2CBEF40600956D0D /* WantedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598658D2CBEF40600956D0D /* WantedListView.swift */; };
-		459865902CBEF46600956D0D /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598658F2CBEF46600956D0D /* PersonCard.swift */; };
+		459865902CBEF46600956D0D /* WantedPersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598658F2CBEF46600956D0D /* WantedPersonCardView.swift */; };
 		459865922CBEF65F00956D0D /* WantedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865912CBEF65F00956D0D /* WantedListViewModel.swift */; };
 		459865952CBEF74C00956D0D /* WantedListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865942CBEF74C00956D0D /* WantedListResponse.swift */; };
 		4598659A2CBEF94900956D0D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865992CBEF94900956D0D /* HTTPClient.swift */; };
@@ -31,7 +31,7 @@
 		457586452CBEF12A006F5207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457586482CBEF12A006F5207 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4598658D2CBEF40600956D0D /* WantedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListView.swift; sourceTree = "<group>"; };
-		4598658F2CBEF46600956D0D /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
+		4598658F2CBEF46600956D0D /* WantedPersonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedPersonCardView.swift; sourceTree = "<group>"; };
 		459865912CBEF65F00956D0D /* WantedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListViewModel.swift; sourceTree = "<group>"; };
 		459865942CBEF74C00956D0D /* WantedListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListResponse.swift; sourceTree = "<group>"; };
 		459865992CBEF94900956D0D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			children = (
 				4598658D2CBEF40600956D0D /* WantedListView.swift */,
 				459865912CBEF65F00956D0D /* WantedListViewModel.swift */,
-				4598658F2CBEF46600956D0D /* PersonCard.swift */,
+				4598658F2CBEF46600956D0D /* WantedPersonCardView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				459865A42CBF8F8500956D0D /* WantedListResponse+Mapper.swift in Sources */,
-				459865902CBEF46600956D0D /* PersonCard.swift in Sources */,
+				459865902CBEF46600956D0D /* WantedPersonCardView.swift in Sources */,
 				457586442CBEF126006F5207 /* ContentView.swift in Sources */,
 				459865922CBEF65F00956D0D /* WantedListViewModel.swift in Sources */,
 				459865AF2CC0160000956D0D /* ImageView.swift in Sources */,

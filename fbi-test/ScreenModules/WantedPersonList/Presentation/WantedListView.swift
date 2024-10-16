@@ -52,7 +52,7 @@ struct WantedListView: View {
         List {
             ForEach(viewModel.wantedPersonList, id: \.self ) { item in
                 NavigationLink(value: item) {
-                    PersonCard(
+                    WantedPersonCardView(
                         name: item.title,
                         personInfo: "",
                         imageUrl: item.avatarURL)
