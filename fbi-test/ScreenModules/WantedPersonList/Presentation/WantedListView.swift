@@ -23,18 +23,7 @@ struct WantedListView: View {
     var body: some View {
         ZStack {
             content
-            
-            if viewModel.isLoading {
-                Color.black.opacity(0.4)
-                    .edgesIgnoringSafeArea(.all)
-                
-                ProgressView("Loading...")
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                    .shadow(radius: 10)
-            }
+            progressView
         }
     }
     
@@ -50,7 +39,7 @@ struct WantedListView: View {
     
     private var header: some View {
         HStack(alignment: .center) {
-            Text("FBI Wanted List")
+            Text(viewModel.headerTitle)
                 .font(.title)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
@@ -76,6 +65,12 @@ struct WantedListView: View {
         }
     }
     
+    @ViewBuilder
+    private var progressView: some View {
+        if viewModel.isLoading {
+            ProgressViewIndicator()
+        }
+    }
 }
 
 #Preview {

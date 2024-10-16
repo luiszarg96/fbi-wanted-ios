@@ -22,6 +22,8 @@
 		459865A62CBF93C300956D0D /* FBIWantedPersonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865A52CBF93C300956D0D /* FBIWantedPersonUseCase.swift */; };
 		459865AB2CC015BB00956D0D /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865AA2CC015BB00956D0D /* ImageCacheManager.swift */; };
 		459865AF2CC0160000956D0D /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865AE2CC0160000956D0D /* ImageView.swift */; };
+		459865B32CC0265900956D0D /* AppLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865B22CC0265900956D0D /* AppLocalized.swift */; };
+		459865B52CC0274400956D0D /* ProgressViewIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865B42CC0274400956D0D /* ProgressViewIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		459865A52CBF93C300956D0D /* FBIWantedPersonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBIWantedPersonUseCase.swift; sourceTree = "<group>"; };
 		459865AA2CC015BB00956D0D /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		459865AE2CC0160000956D0D /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		459865B22CC0265900956D0D /* AppLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalized.swift; sourceTree = "<group>"; };
+		459865B42CC0274400956D0D /* ProgressViewIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 				4575864F2CBEF192006F5207 /* App */,
 				459865A92CC0154F00956D0D /* Storage */,
 				457586522CBEF231006F5207 /* Resources */,
+				459865AC2CC015CC00956D0D /* Common */,
 				457586502CBEF1EF006F5207 /* Networking */,
 				457586512CBEF1F6006F5207 /* ScreenModules */,
 				457586472CBEF12A006F5207 /* Preview Content */,
@@ -111,7 +116,6 @@
 		457586512CBEF1F6006F5207 /* ScreenModules */ = {
 			isa = PBXGroup;
 			children = (
-				459865AC2CC015CC00956D0D /* Common */,
 				459865A82CC0152000956D0D /* WantedPersonList */,
 			);
 			path = ScreenModules;
@@ -199,6 +203,8 @@
 		459865AC2CC015CC00956D0D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				459865B12CC0263A00956D0D /* Constants */,
+				459865B02CC0261D00956D0D /* Localized */,
 				459865AD2CC015E900956D0D /* Components */,
 			);
 			path = Common;
@@ -208,8 +214,24 @@
 			isa = PBXGroup;
 			children = (
 				459865AE2CC0160000956D0D /* ImageView.swift */,
+				459865B42CC0274400956D0D /* ProgressViewIndicator.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		459865B02CC0261D00956D0D /* Localized */ = {
+			isa = PBXGroup;
+			children = (
+				459865B22CC0265900956D0D /* AppLocalized.swift */,
+			);
+			path = Localized;
+			sourceTree = "<group>";
+		};
+		459865B12CC0263A00956D0D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +309,7 @@
 				457586442CBEF126006F5207 /* ContentView.swift in Sources */,
 				459865922CBEF65F00956D0D /* WantedListViewModel.swift in Sources */,
 				459865AF2CC0160000956D0D /* ImageView.swift in Sources */,
+				459865B32CC0265900956D0D /* AppLocalized.swift in Sources */,
 				459865A62CBF93C300956D0D /* FBIWantedPersonUseCase.swift in Sources */,
 				4598659D2CBEFB3500956D0D /* WantedPersonDomain.swift in Sources */,
 				4598659A2CBEF94900956D0D /* HTTPClient.swift in Sources */,
@@ -295,6 +318,7 @@
 				459865A22CBF8EF400956D0D /* FBIWantedPersonRepository.swift in Sources */,
 				4598658E2CBEF40600956D0D /* WantedListView.swift in Sources */,
 				457586422CBEF126006F5207 /* fbi_testApp.swift in Sources */,
+				459865B52CC0274400956D0D /* ProgressViewIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,10 +19,6 @@ final class WantedListViewModel: ObservableObject {
     private let wantedPersonUseCase: FBIWantedPersonUseCaseType
     private var cancellables: Set<AnyCancellable> = []
     
-    // MARK: - Internal Properties
-    
-    // MARK: - Variables
-    
     // MARK: - Initializer
     init(
         wantedPersonUseCase: FBIWantedPersonUseCaseType = FBIWantedPersonUseCase()
@@ -60,5 +56,8 @@ final class WantedListViewModel: ObservableObject {
 // MARK: - Localizable values
 extension WantedListViewModel {
     
+    var headerTitle: String {
+        AppLocalized.headerTitle
+    }
 }
 

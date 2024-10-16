@@ -67,7 +67,7 @@ struct WantedPersonCardView: View {
                 }
             
             if hasMoreDescription {
-                Text("Show \(maxLines == 2 ? "More" : "Less")")
+                Text(getButtonText())
                     .foregroundStyle(.blue)
                     .onTapGesture {
                         withAnimation {
@@ -79,6 +79,21 @@ struct WantedPersonCardView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
+    private func getButtonText() -> String{
+        maxLines == 2 ? showMoreButton : showLessButton
+    }
+    
+}
+
+// MARK: Localizables
+extension WantedPersonCardView {
+    var showMoreButton: String {
+        AppLocalized.showMore
+    }
+
+    var showLessButton: String {
+        AppLocalized.showLess
+    }
 }
 
 #Preview {
