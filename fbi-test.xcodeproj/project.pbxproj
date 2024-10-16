@@ -11,6 +11,12 @@
 		457586442CBEF126006F5207 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457586432CBEF126006F5207 /* ContentView.swift */; };
 		457586462CBEF12A006F5207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457586452CBEF12A006F5207 /* Assets.xcassets */; };
 		457586492CBEF12A006F5207 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457586482CBEF12A006F5207 /* Preview Assets.xcassets */; };
+		4598658E2CBEF40600956D0D /* WantedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598658D2CBEF40600956D0D /* WantedListView.swift */; };
+		459865902CBEF46600956D0D /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598658F2CBEF46600956D0D /* PersonCard.swift */; };
+		459865922CBEF65F00956D0D /* WantedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865912CBEF65F00956D0D /* WantedListViewModel.swift */; };
+		459865952CBEF74C00956D0D /* WantedListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865942CBEF74C00956D0D /* WantedListResponse.swift */; };
+		4598659A2CBEF94900956D0D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865992CBEF94900956D0D /* HTTPClient.swift */; };
+		4598659D2CBEFB3500956D0D /* WanterPersonDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598659C2CBEFB3500956D0D /* WanterPersonDomain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		457586432CBEF126006F5207 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		457586452CBEF12A006F5207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457586482CBEF12A006F5207 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4598658D2CBEF40600956D0D /* WantedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListView.swift; sourceTree = "<group>"; };
+		4598658F2CBEF46600956D0D /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
+		459865912CBEF65F00956D0D /* WantedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListViewModel.swift; sourceTree = "<group>"; };
+		459865942CBEF74C00956D0D /* WantedListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListResponse.swift; sourceTree = "<group>"; };
+		459865992CBEF94900956D0D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		4598659C2CBEFB3500956D0D /* WanterPersonDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanterPersonDomain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +63,10 @@
 		457586402CBEF126006F5207 /* fbi-test */ = {
 			isa = PBXGroup;
 			children = (
-				457586412CBEF126006F5207 /* fbi_testApp.swift */,
-				457586432CBEF126006F5207 /* ContentView.swift */,
-				457586452CBEF12A006F5207 /* Assets.xcassets */,
+				457586522CBEF231006F5207 /* Resources */,
+				4575864F2CBEF192006F5207 /* App */,
+				457586502CBEF1EF006F5207 /* Networking */,
+				457586512CBEF1F6006F5207 /* Presentartion Layer */,
 				457586472CBEF12A006F5207 /* Preview Content */,
 			);
 			path = "fbi-test";
@@ -65,6 +78,83 @@
 				457586482CBEF12A006F5207 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4575864F2CBEF192006F5207 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				457586412CBEF126006F5207 /* fbi_testApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		457586502CBEF1EF006F5207 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				459865992CBEF94900956D0D /* HTTPClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		457586512CBEF1F6006F5207 /* Presentartion Layer */ = {
+			isa = PBXGroup;
+			children = (
+				459865932CBEF73100956D0D /* data */,
+				457586432CBEF126006F5207 /* ContentView.swift */,
+				4598658D2CBEF40600956D0D /* WantedListView.swift */,
+				459865912CBEF65F00956D0D /* WantedListViewModel.swift */,
+				4598658F2CBEF46600956D0D /* PersonCard.swift */,
+			);
+			path = "Presentartion Layer";
+			sourceTree = "<group>";
+		};
+		457586522CBEF231006F5207 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				457586452CBEF12A006F5207 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		459865932CBEF73100956D0D /* data */ = {
+			isa = PBXGroup;
+			children = (
+				4598659B2CBEFB2700956D0D /* Domain */,
+				459865962CBEF8EE00956D0D /* DTO */,
+				459865982CBEF90400956D0D /* Repositories */,
+				459865972CBEF8FA00956D0D /* UseCases */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		459865962CBEF8EE00956D0D /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				459865942CBEF74C00956D0D /* WantedListResponse.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		459865972CBEF8FA00956D0D /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		459865982CBEF90400956D0D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		4598659B2CBEFB2700956D0D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4598659C2CBEFB3500956D0D /* WanterPersonDomain.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459865902CBEF46600956D0D /* PersonCard.swift in Sources */,
 				457586442CBEF126006F5207 /* ContentView.swift in Sources */,
+				459865922CBEF65F00956D0D /* WantedListViewModel.swift in Sources */,
+				4598659D2CBEFB3500956D0D /* WanterPersonDomain.swift in Sources */,
+				4598659A2CBEF94900956D0D /* HTTPClient.swift in Sources */,
+				459865952CBEF74C00956D0D /* WantedListResponse.swift in Sources */,
+				4598658E2CBEF40600956D0D /* WantedListView.swift in Sources */,
 				457586422CBEF126006F5207 /* fbi_testApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
