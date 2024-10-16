@@ -20,6 +20,8 @@
 		459865A22CBF8EF400956D0D /* FBIWantedPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865A12CBF8EF400956D0D /* FBIWantedPersonRepository.swift */; };
 		459865A42CBF8F8500956D0D /* WantedListResponse+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865A32CBF8F8500956D0D /* WantedListResponse+Mapper.swift */; };
 		459865A62CBF93C300956D0D /* FBIWantedPersonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865A52CBF93C300956D0D /* FBIWantedPersonUseCase.swift */; };
+		459865AB2CC015BB00956D0D /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865AA2CC015BB00956D0D /* ImageCacheManager.swift */; };
+		459865AF2CC0160000956D0D /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865AE2CC0160000956D0D /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		459865A12CBF8EF400956D0D /* FBIWantedPersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBIWantedPersonRepository.swift; sourceTree = "<group>"; };
 		459865A32CBF8F8500956D0D /* WantedListResponse+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WantedListResponse+Mapper.swift"; sourceTree = "<group>"; };
 		459865A52CBF93C300956D0D /* FBIWantedPersonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBIWantedPersonUseCase.swift; sourceTree = "<group>"; };
+		459865AA2CC015BB00956D0D /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		459865AE2CC0160000956D0D /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		457586512CBEF1F6006F5207 /* ScreenModules */ = {
 			isa = PBXGroup;
 			children = (
+				459865AC2CC015CC00956D0D /* Common */,
 				459865A82CC0152000956D0D /* WantedPersonList */,
 			);
 			path = ScreenModules;
@@ -186,8 +191,25 @@
 		459865A92CC0154F00956D0D /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				459865AA2CC015BB00956D0D /* ImageCacheManager.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		459865AC2CC015CC00956D0D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				459865AD2CC015E900956D0D /* Components */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		459865AD2CC015E900956D0D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				459865AE2CC0160000956D0D /* ImageView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,10 +286,12 @@
 				459865902CBEF46600956D0D /* PersonCard.swift in Sources */,
 				457586442CBEF126006F5207 /* ContentView.swift in Sources */,
 				459865922CBEF65F00956D0D /* WantedListViewModel.swift in Sources */,
+				459865AF2CC0160000956D0D /* ImageView.swift in Sources */,
 				459865A62CBF93C300956D0D /* FBIWantedPersonUseCase.swift in Sources */,
 				4598659D2CBEFB3500956D0D /* WanterPersonDomain.swift in Sources */,
 				4598659A2CBEF94900956D0D /* HTTPClient.swift in Sources */,
 				459865952CBEF74C00956D0D /* WantedListResponse.swift in Sources */,
+				459865AB2CC015BB00956D0D /* ImageCacheManager.swift in Sources */,
 				459865A22CBF8EF400956D0D /* FBIWantedPersonRepository.swift in Sources */,
 				4598658E2CBEF40600956D0D /* WantedListView.swift in Sources */,
 				457586422CBEF126006F5207 /* fbi_testApp.swift in Sources */,
