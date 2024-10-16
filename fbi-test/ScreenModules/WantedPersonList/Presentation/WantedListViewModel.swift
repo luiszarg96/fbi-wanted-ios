@@ -14,6 +14,8 @@ final class WantedListViewModel: ObservableObject {
     // MARK: - Published Properties
     @Published var wantedPersonList: [WantedPersonDomain] = []
     @Published var isLoading: Bool = false
+    @Published var showAlert: Bool = false
+    @Published var showErrorMessage: Bool = false
     
     // MARK: - Private Properties
     private let wantedPersonUseCase: FBIWantedPersonUseCaseType
@@ -42,9 +44,12 @@ final class WantedListViewModel: ObservableObject {
             .sink { completion in
                 self.isLoading = false
                 guard case .failure = completion else { return }
+                self.showAlert = true
+                self.showErrorMessage = true
                 
             } receiveValue: { [weak self] wantedListResponse in
                 self?.wantedPersonList = wantedListResponse.toDomain()
+                self?.showErrorMessage = false
             }
             .store(in: &cancellables)
     }
@@ -57,5 +62,18 @@ extension WantedListViewModel {
     var headerTitle: String {
         AppLocalized.headerTitle
     }
+    
+    var errorAlertTitle: String {
+        AppLocalized.errorAlertTitle
+    }
+    
+    var errorAlertMessage: String {
+        AppLocalized.errorAlertMessage
+    }
+
+    var errorButton: String {
+        AppLocalized.errorButton
+    }
+    
 }
 

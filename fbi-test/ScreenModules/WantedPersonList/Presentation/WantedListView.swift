@@ -28,6 +28,11 @@ struct WantedListView: View {
         .onAppear {
             viewModel.setup()
         }
+        .alert(viewModel.errorAlertTitle, isPresented: $viewModel.showAlert) {
+            Button(viewModel.errorButton, role: .cancel) { }
+        } message: {
+            Text(viewModel.errorAlertMessage)
+        }
     }
     
     private var content: some View {
@@ -35,7 +40,12 @@ struct WantedListView: View {
             VStack {
                 header
                 
-                wantedPersonList
+                if viewModel.showErrorMessage {
+                    errorMessage
+                } else {
+                    wantedPersonList
+                }
+                
             }
         }
     }
@@ -66,6 +76,9 @@ struct WantedListView: View {
                 }
             }
         }
+        .refreshable {
+            viewModel.fetchWantedPersonList()
+        }
     }
     
     @ViewBuilder
@@ -73,6 +86,22 @@ struct WantedListView: View {
         if viewModel.isLoading {
             ProgressViewIndicator()
         }
+    }
+    
+    private var errorMessage: some View {
+        VStack {
+            Image(systemName: WantedListConstants.errorIcon)
+                .resizable()
+                .frame(width: WantedListConstants.errorIconSize, height: WantedListConstants.errorIconSize)
+                .foregroundColor(.red)
+                .opacity(0.5)
+            
+            Text(viewModel.errorAlertMessage)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.gray)
+        }
+        .frame(maxHeight: .infinity)
+        .padding(.horizontal)
     }
 }
 
