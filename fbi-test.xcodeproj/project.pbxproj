@@ -69,6 +69,7 @@
 		457586402CBEF126006F5207 /* fbi-test */ = {
 			isa = PBXGroup;
 			children = (
+				459865A92CC0154F00956D0D /* Storage */,
 				457586522CBEF231006F5207 /* Resources */,
 				4575864F2CBEF192006F5207 /* App */,
 				457586502CBEF1EF006F5207 /* Networking */,
@@ -106,12 +107,7 @@
 		457586512CBEF1F6006F5207 /* ScreenModules */ = {
 			isa = PBXGroup;
 			children = (
-				459865932CBEF73100956D0D /* Data */,
-				4598659B2CBEFB2700956D0D /* Domain */,
-				459865A72CC014A600956D0D /* Presentation */,
-				4598658D2CBEF40600956D0D /* WantedListView.swift */,
-				459865912CBEF65F00956D0D /* WantedListViewModel.swift */,
-				4598658F2CBEF46600956D0D /* PersonCard.swift */,
+				459865A82CC0152000956D0D /* WantedPersonList */,
 			);
 			path = ScreenModules;
 			sourceTree = "<group>";
@@ -170,8 +166,28 @@
 		459865A72CC014A600956D0D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				4598658D2CBEF40600956D0D /* WantedListView.swift */,
+				459865912CBEF65F00956D0D /* WantedListViewModel.swift */,
+				4598658F2CBEF46600956D0D /* PersonCard.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		459865A82CC0152000956D0D /* WantedPersonList */ = {
+			isa = PBXGroup;
+			children = (
+				459865932CBEF73100956D0D /* Data */,
+				4598659B2CBEFB2700956D0D /* Domain */,
+				459865A72CC014A600956D0D /* Presentation */,
+			);
+			path = WantedPersonList;
+			sourceTree = "<group>";
+		};
+		459865A92CC0154F00956D0D /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
