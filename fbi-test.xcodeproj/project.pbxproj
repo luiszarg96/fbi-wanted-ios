@@ -16,7 +16,7 @@
 		459865922CBEF65F00956D0D /* WantedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865912CBEF65F00956D0D /* WantedListViewModel.swift */; };
 		459865952CBEF74C00956D0D /* WantedListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865942CBEF74C00956D0D /* WantedListResponse.swift */; };
 		4598659A2CBEF94900956D0D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865992CBEF94900956D0D /* HTTPClient.swift */; };
-		4598659D2CBEFB3500956D0D /* WanterPersonDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598659C2CBEFB3500956D0D /* WanterPersonDomain.swift */; };
+		4598659D2CBEFB3500956D0D /* WantedPersonDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4598659C2CBEFB3500956D0D /* WantedPersonDomain.swift */; };
 		459865A22CBF8EF400956D0D /* FBIWantedPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865A12CBF8EF400956D0D /* FBIWantedPersonRepository.swift */; };
 		459865A42CBF8F8500956D0D /* WantedListResponse+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865A32CBF8F8500956D0D /* WantedListResponse+Mapper.swift */; };
 		459865A62CBF93C300956D0D /* FBIWantedPersonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459865A52CBF93C300956D0D /* FBIWantedPersonUseCase.swift */; };
@@ -35,7 +35,7 @@
 		459865912CBEF65F00956D0D /* WantedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListViewModel.swift; sourceTree = "<group>"; };
 		459865942CBEF74C00956D0D /* WantedListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedListResponse.swift; sourceTree = "<group>"; };
 		459865992CBEF94900956D0D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		4598659C2CBEFB3500956D0D /* WanterPersonDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanterPersonDomain.swift; sourceTree = "<group>"; };
+		4598659C2CBEFB3500956D0D /* WantedPersonDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantedPersonDomain.swift; sourceTree = "<group>"; };
 		459865A12CBF8EF400956D0D /* FBIWantedPersonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBIWantedPersonRepository.swift; sourceTree = "<group>"; };
 		459865A32CBF8F8500956D0D /* WantedListResponse+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WantedListResponse+Mapper.swift"; sourceTree = "<group>"; };
 		459865A52CBF93C300956D0D /* FBIWantedPersonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBIWantedPersonUseCase.swift; sourceTree = "<group>"; };
@@ -73,9 +73,9 @@
 		457586402CBEF126006F5207 /* fbi-test */ = {
 			isa = PBXGroup;
 			children = (
+				4575864F2CBEF192006F5207 /* App */,
 				459865A92CC0154F00956D0D /* Storage */,
 				457586522CBEF231006F5207 /* Resources */,
-				4575864F2CBEF192006F5207 /* App */,
 				457586502CBEF1EF006F5207 /* Networking */,
 				457586512CBEF1F6006F5207 /* ScreenModules */,
 				457586472CBEF12A006F5207 /* Preview Content */,
@@ -162,7 +162,7 @@
 		4598659B2CBEFB2700956D0D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				4598659C2CBEFB3500956D0D /* WanterPersonDomain.swift */,
+				4598659C2CBEFB3500956D0D /* WantedPersonDomain.swift */,
 				459865972CBEF8FA00956D0D /* UseCases */,
 			);
 			path = Domain;
@@ -288,7 +288,7 @@
 				459865922CBEF65F00956D0D /* WantedListViewModel.swift in Sources */,
 				459865AF2CC0160000956D0D /* ImageView.swift in Sources */,
 				459865A62CBF93C300956D0D /* FBIWantedPersonUseCase.swift in Sources */,
-				4598659D2CBEFB3500956D0D /* WanterPersonDomain.swift in Sources */,
+				4598659D2CBEFB3500956D0D /* WantedPersonDomain.swift in Sources */,
 				4598659A2CBEF94900956D0D /* HTTPClient.swift in Sources */,
 				459865952CBEF74C00956D0D /* WantedListResponse.swift in Sources */,
 				459865AB2CC015BB00956D0D /* ImageCacheManager.swift in Sources */,

@@ -12,12 +12,8 @@ import Combine
 final class WantedListViewModel: ObservableObject {
     
     // MARK: - Published Properties
-    @Published var wantedPersonList: [WanterPersonDomain] = [
-        .init(title: "Marty Perez", avatarURL: "https://www.fbi.gov/wanted/vicap/missing-persons/jesus-de-la-cruz---lynn-massachusetts/@@images/image/thumb"),
-        .init(title: "Luis Zarza", avatarURL: "https://www.fbi.gov/wanted/vicap/missing-persons/jesus-de-la-cruz---lynn-massachusetts/@@images/image/thumb"),
-        .init(title: "Maria Gonzalez", avatarURL: "https://www.fbi.gov/wanted/vicap/missing-persons/jesus-de-la-cruz---lynn-massachusetts/@@images/image/thumb"),
-        .init(title: "Jesus Robinson", avatarURL: "https://www.fbi.gov/wanted/vicap/missing-persons/jesus-de-la-cruz---lynn-massachusetts/@@images/image/thumb"),
-    ]
+    @Published var wantedPersonList: [WantedPersonDomain] = []
+    @Published var isLoading: Bool = false
     
     // MARK: - Private Properties
     private let wantedPersonUseCase: FBIWantedPersonUseCaseType
@@ -46,7 +42,11 @@ final class WantedListViewModel: ObservableObject {
         wantedPersonUseCase
             .fetchWantedPersonList()
             .receive(on: RunLoop.main)
+            .handleEvents(receiveSubscription: { _ in
+                self.isLoading = true
+            })
             .sink { completion in
+                self.isLoading = false
                 guard case .failure = completion else { return }
                 
             } receiveValue: { [weak self] wantedListResponse in

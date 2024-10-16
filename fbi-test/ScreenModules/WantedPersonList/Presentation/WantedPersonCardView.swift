@@ -9,9 +9,14 @@ import SwiftUI
 
 struct WantedPersonCardView: View {
     
+    // MARK: Wrapped Properties
+    @State private var maxLines: Int? = 2
+    @State private var hasMoreDescription = false
+    
     // MARK: Properties
-    var name: String
-    var personInfo: String
+    var title: String
+    var aliases: String
+    var description: String
     var imageUrl: String
     
     // MARK: Body
@@ -33,29 +38,55 @@ struct WantedPersonCardView: View {
     private var info: some View {
         
         VStack(alignment: .leading) {
-            Text(name)
+            Text(title)
+                .bold()
             
-            Text("Alias: Boris levitan, Boris")
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .font(.title2)
-                .foregroundStyle(.gray)
+            if !aliases.isEmpty {
+                Text(aliases)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.headline)
+                    .foregroundStyle(.gray)
+            }
             
-            Text(personInfo)
+            Text(description)
+                .lineLimit(maxLines)
+                .background {
+                    GeometryReader { outer in
+                        Text(description)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .overlay {
+                                GeometryReader { proxy in
+                                    Color.clear
+                                        .onAppear {
+                                            hasMoreDescription = proxy.size.height > outer.size.height
+                                        }
+                                }
+                            }
+                            .hidden()
+                    }
+                }
             
-            Button(action: {},
-                   label: {
-                Text("Show More")
-            })
+            if hasMoreDescription {
+                Text("Show \(maxLines == 2 ? "More" : "Less")")
+                    .foregroundStyle(.blue)
+                    .onTapGesture {
+                        withAnimation {
+                            maxLines = maxLines == 2 ? nil : 2
+                        }
+                    }
+            }
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
     
 }
 
 #Preview {
     WantedPersonCardView(
-        name: "Jesus de la criz",
-        personInfo: "Loren ipsum",
-        imageUrl: "https://www.fbi.gov/wanted/vicap/missing-persons/jesus-de-la-cruz---lynn-massachusetts/@@images/image/thumb"
+        title: "BORIS YAKOVLEVICH LIVSHITS",
+        aliases: "MJ, JB, NC",
+        description: " Conspiracy to Defraud the United States; Conspiracy to Violate the International Emergency Economic Powers Act (IEEPA); Bank Fraud Conspiracy; Wire Fraud Conspiracy; Wire Fraud; Money Laundering Conspiracy; Money Laundering; Conspiracy to Violate the Export Control Reform Act (ECRA); Smuggling Goods from the United States; Failure to File Electronic Export Information ",
+        imageUrl: "https://www.fbi.gov/wanted/counterintelligence/boris-yakovlevich-livshits/@@images/image/thumb"
     )
     .previewLayout(.sizeThatFits)
 }

@@ -21,7 +21,21 @@ struct WantedListView: View {
     
     // MARK: Body
     var body: some View {
-        content
+        ZStack {
+            content
+            
+            if viewModel.isLoading {
+                Color.black.opacity(0.4)
+                    .edgesIgnoringSafeArea(.all)
+                
+                ProgressView("Loading...")
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 10)
+            }
+        }
     }
     
     private var content: some View {
@@ -53,8 +67,9 @@ struct WantedListView: View {
             ForEach(viewModel.wantedPersonList, id: \.self ) { item in
                 NavigationLink(value: item) {
                     WantedPersonCardView(
-                        name: item.title,
-                        personInfo: "",
+                        title: item.title,
+                        aliases: item.aliases,
+                        description: item.description,
                         imageUrl: item.avatarURL)
                 }
             }

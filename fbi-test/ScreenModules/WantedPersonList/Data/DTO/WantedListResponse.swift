@@ -18,6 +18,7 @@ struct WantedPerson: Codable {
 //    let ageMin: Int?
 //    let path, remarks, eyes, status: String?
     let description: String?
+    let aliases: [String]?
 //    let rewardText: String?
 //    let details: String?
 //    let complexion: String?
@@ -56,6 +57,7 @@ struct WantedPerson: Codable {
 //        case ageMin = "age_min"
 //        case path, remarks, eyes, status
         case description
+        case aliases
 //        case rewardText = "reward_text"
 //        case details, complexion
 //        case posterClassification = "poster_classification"

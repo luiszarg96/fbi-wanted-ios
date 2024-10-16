@@ -8,10 +8,14 @@
 import Foundation
 
 extension WantedListResponse {
-    func toDomain() -> [WanterPersonDomain] {
+    func toDomain() -> [WantedPersonDomain] {
         items.map {
-            .init(
+            let aliases = $0.aliases?.joined(separator: ", ") ?? ""
+            
+            return .init(
                 title: $0.title ?? "",
+                description: $0.description ?? "",
+                aliases: aliases,
                 avatarURL: $0.images?.first?.thumb ?? ""
             )
         }
